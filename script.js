@@ -1,13 +1,18 @@
-const starterStrings = ['Il segreto della felicità?', 'La cosa migliore da fare domani?', 
-                        'La mia nuova filosofia di vita?'];
-const endingStrings = ['Vivere con il sorriso.', 'Godersi ogni istante.', 'Non correre!.'];
 
-const getRandomString = (stringsArray) => {
-    return stringsArray[Math.floor(Math.random() * stringsArray.length)];
+// Get random element from an array
+const getRandomElement = (array) => {
+    return array[Math.floor(Math.random() * array.length)];
 }
 
-const createMessage = (arr1, arr2) => {
-    return getRandomString(arr1) + ' ' + getRandomString(arr2);
+// Create random message from object containing starterStrings and endingStrings properties
+const createMessage = (object) => {
+    return getRandomElement(object.starterStrings) + ' ' + getRandomElement(object.endingStrings);
 }
 
-console.log(createMessage(starterStrings, endingStrings));
+/* ---------  TEST  --------- */
+
+const messages = {
+    starterStrings: ['Il segreto della felicità?', 'La cosa migliore da fare domani?', 'La mia nuova filosofia di vita?'],
+    endingStrings: ['Vivere con il sorriso.', 'Godersi ogni istante.', 'Non correre!.']
+}
+console.log(createMessage(messages));
