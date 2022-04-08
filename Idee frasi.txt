@@ -1,0 +1,3 @@
+straterStrings = [ 'Il segreto della felicità?', 'La cosa migliore da fare domani?', 'La mia nuova filosofia di vita?' ]
+
+endingStrings = [ 'Vivere con il sorriso.', 'Godersi ogni istante.', 'Non correre!.' ]
